@@ -1,0 +1,46 @@
+.unique
+    bg-color: #8A8A8A
+
+.unique-wrapper 
+    h: 170px
+    d: flex
+    ai: center
+    flex-direction: column
+
+    +mq-lg
+        flex-direction: row
+        jc: space-between
+
+
+    &__
+        &title
+            color: #383838
+            fs: 26px
+            fw: 700
+            ta: center
+
+            +mq-lg
+               ta: left 
+
+        &icon
+            color: var(--theme-text-3)
+
+        &button
+            w: 181px
+            h: 40px
+            bg-color: var(--theme-accent-main)
+            color: #e4e4e4
+            fs: 13px
+            br: none
+            tr: .3s
+            mt: 20px
+
+            +mq-lg
+                mt: 0px
+
+            @media (hover: hover) and (pointer: fine)
+                &:hover
+                    bg-color: #383838
+        
+        &text
+            mr: 10px

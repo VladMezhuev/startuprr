@@ -1,0 +1,110 @@
+include ./../../mixins/work-card
+include ./../../mixins/index
+
+- 
+    const workCards = [
+        [{
+            iconLeft: "&#xe016;",
+            iconRight: "&#x55;",
+            title: "Corporate Brochure",
+            text: "Illustration / Print",
+            count: "138"
+        }],
+        [{
+            iconLeft: "&#xe016;",
+            iconRight: "&#x55;",
+            title: "Corporate Brochure",
+            text: "Illustration / Print",
+            count: "138"
+        }],
+        [{
+            iconLeft: "&#xe016;",
+            iconRight: "&#x55;",
+            title: "Corporate Brochure",
+            text: "Illustration / Print",
+            count: "138"
+        }],
+        [{
+            iconLeft: "&#xe016;",
+            iconRight: "&#x55;",
+            title: "Corporate Brochure",
+            text: "Illustration / Print",
+            count: "138"
+        }],
+        [{
+            iconLeft: "&#xe016;",
+            iconRight: "&#x55;",
+            title: "Corporate Brochure",
+            text: "Illustration / Print",
+            count: "138"
+        }],
+        [{
+            iconLeft: "&#xe016;",
+            iconRight: "&#x55;",
+            title: "Corporate Brochure",
+            text: "Illustration / Print",
+            count: "138"
+        }],
+        [{
+            iconLeft: "&#xe016;",
+            iconRight: "&#x55;",
+            title: "Corporate Brochure",
+            text: "Illustration / Print",
+            count: "138"
+        }],
+        [{
+            iconLeft: "&#xe016;",
+            iconRight: "&#x55;",
+            title: "Corporate Brochure",
+            text: "Illustration / Print",
+            count: "138"
+        }],
+        [{
+            iconLeft: "&#xe016;",
+            iconRight: "&#x55;",
+            title: "Corporate Brochure",
+            text: "Illustration / Print",
+            count: "138"
+        }],
+        [{
+            iconLeft: "&#xe016;",
+            iconRight: "&#x55;",
+            title: "Corporate Brochure",
+            text: "Illustration / Print",
+            count: "138"
+        }],
+        [{
+            iconLeft: "&#xe016;",
+            iconRight: "&#x55;",
+            title: "Corporate Brochure",
+            text: "Illustration / Print",
+            count: "138"
+        }],
+        [{
+            iconLeft: "&#xe016;",
+            iconRight: "&#x55;",
+            title: "Corporate Brochure",
+            text: "Illustration / Print",
+            count: "138"
+        }],
+    ]   
+
++b.works.SECTION
+    +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+        +b.category-wrapper
+            +b.site-category.--alter
+                +e.top
+                    +e.img-wrapper
+                        +e.image.img.IMG(src=('../public/icons/left-part.png'))
+                    +e.name.P sample 
+                        span.first-word works
+                    +e.img-wrapper
+                        +e.image.img.IMG(src=('../public/icons/right-part.png'))
+                +e.bottom 
+                    +e.text.text.--category.P Let’s take a look at some of the best of our works here, we love them and hope you too
+    +b.work-wrapper
+        each card in workCards
+            +e.column
+                +workCard(card)
+        
+    +e.button.btn.A(href=("#")) view all works

@@ -1,0 +1,16 @@
+include ./../../../node_modules/bemtopuginvue/bemto.pug
+
+
+mixin featuresCard(cardsData = [])
+    +b.features-card 
+        each card in cardsData
+            +e.icon-wrapper 
+                +e.icon.SPAN!= card.icon
+            +e.text-part
+                +e.title.title.--light.H2= card.title
+                +e.text.text.P= card.text
+        
+
+
+
+

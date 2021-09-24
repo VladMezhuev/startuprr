@@ -1,0 +1,25 @@
+include ./../../../node_modules/bemtopuginvue/bemto.pug
+
+mixin priceCard(cardsData = [])
+    +b.price-card 
+        each card in cardsData
+            +e.top 
+                +e.price 
+                    +e.currency.SPAN $
+                    +e.dollar.SPAN= card.dollar
+                    +e.cent-block 
+                        +e.cents.SPAN= card.cents
+                        +e.dots.SPAN 
+                    +e.time.SPAN= card.time
+                +e.plan-title.btn.A(href=("#"))= card.rate
+            +e.middle 
+                +e.includes.UL 
+                    +e.includes-item.LI= card.projects
+                    +e.includes-item.LI= card.storage
+                    +e.includes-item.LI= card.users
+                    +e.includes-item.LI= card.bandwith
+                    +e.includes-item.LI= card.security
+            +e.bottom 
+                +e.button.btn.A(href=("#"))= card.button
+
+

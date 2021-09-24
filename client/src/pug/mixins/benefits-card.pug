@@ -1,0 +1,13 @@
+include ./../../../node_modules/bemtopuginvue/bemto.pug
+
+mixin benefitsCard(cardsData = {})
+    +b.benefits-card 
+        each card in cardsData
+            +e.icon-section 
+                +e.icon-wrapper-top
+                    +e.icon.SPAN!= card.icon
+                +e.icon-wrapper-bottom
+            +e.text-section 
+                +e.title.title.H2= card.title
+                +e.subtitle.subtitle.P= card.subtitle
+                +e.text.text.P= card.text

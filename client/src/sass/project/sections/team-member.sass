@@ -1,0 +1,189 @@
+.team
+    pos: relative
+
+.controls
+    d: flex
+    ai: center
+    jc: center
+    cursor: pointer
+    pos: absolute
+    w: 30px
+    h: 30px
+    bg-color: var(--theme-accent-main)
+    top: 7%
+    br-radius: 5px
+    tr: .3s
+
+    @media (hover: hover) and (pointer: fine)
+        &:hover
+            bg-color: #383838
+
+.prev
+    left: 0
+
+.next
+    right: 0
+
+.control-icon
+    color: #e4e4e4
+    fs: 25px
+
+.team-members
+    pb: 107px
+
+
+    .team-members-slider 
+        mt: 50px
+
+        +mq-lg
+            pl: 15px
+    
+    .team-members-slide
+        d: flex !important
+        flex-direction: column
+        ai: center
+        br: 1px solid #dedede
+        br-radius: 5px
+        pb: 15px
+        overflow: hidden
+        w: 100%
+        
+        +mq-lg
+            max-w: 270px
+        
+        &:last-child
+            mr: 0px
+
+        &__
+            &top
+                pos: relative
+                w: 100%
+                h: 270px
+
+            &front, &back
+                pos: absolute
+                w: 100%
+                h: 100%
+                d: flex
+                ai: center
+                jc: center
+                tr: 1s
+
+            &front
+                bg-color: #8A8A8A
+                z-index: 2
+                d: none
+                
+                +mq-xl
+                    d: block
+
+            &back
+                bg-color: var(--theme-accent-main)
+                z-index: 1
+        
+            
+            &back-content
+                pos: relative
+                d: flex
+                ai: center
+                jc: center
+                
+            
+            &back-icon-wrapper
+                d: flex
+                ai: center
+                jc: center
+                w: 30px
+                h: 30px
+                bg-color: #e4e4e4
+                td: none
+                trans: translateX(-5px) rotate(45deg)
+                br-radius: 5px
+                tr: .3s
+                z-index: 1
+
+                &:first-child
+                    trans: translateX(0px) rotate(45deg)
+
+                @media (hover: hover) and (pointer: fine)
+                    &:hover
+                        bg-color: #383838
+                        z-index: 2
+                        .team-members-slide
+                            &__        
+                                &back-icon
+                                    color: white
+
+            &back-icon
+                trans: rotate(-45deg)
+                fs: 16px
+                color: var(--theme-text-3)
+                tr: .3s
+                
+                
+
+            &middle
+                pos: relative
+                
+            &persone
+                pos: absolute
+                top: 0
+                left: -50%
+                trans: translate(-50%, -50%)
+                w: 136px
+                h: 40px
+                bg-color: var(--theme-accent-main)
+                color: #e4e4e4
+                fs: 13px
+                br: none
+                tr: 1.2s
+                z-index: 3
+
+            &bottom
+                d: flex
+                flex-direction: column
+                ai: center
+                mt: 40px
+                
+            &category
+                fs: 12px
+                color: #606060
+                fw: 500
+                fh: 22px
+                br-bottom: 1px solid #ebebeb
+                pb: 10px
+            
+            &contact-wrapper
+                d: flex
+                flex-direction: column
+                ai: center
+                mt: 15px
+            
+            &email-contact, &phone-contant 
+                d: flex
+                ai: center
+                jc: space-between
+                color: #aaaaaa
+                
+            
+            &email-address, &phone-number
+                td: none
+                color: #aaaaaa
+                fs: 13px
+                fw: 500
+                ml: 10px
+        
+        @media (hover: hover) and (pointer: fine)
+            &:hover
+                .team-members-slide
+                    &__
+                        &front
+                            h: 0px
+                            bottom: 0
+
+                        &persone
+                            tr: 1.2s
+                            bg-color: #383838
+                        
+                        &email-address
+                            color: var(--theme-text-3)

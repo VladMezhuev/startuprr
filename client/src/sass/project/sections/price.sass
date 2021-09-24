@@ -1,0 +1,125 @@
+.price
+    pb: 80px
+    
+.price-list
+    d: flex
+    ai: center
+    flex-wrap: wrap
+    flex-direction: column
+    mt: 70px
+
+    +mq-sm
+        flex-direction: row
+        jc: space-between
+
+    &__
+        &column
+            w: 100%
+
+            +mq-sm
+                w: 49%
+
+            +mq-xl
+                w: 24%
+
+.price-card
+    pos: relative
+    d: flex
+    flex-direction: column
+    ai: center
+    br: 1px solid #dedede
+    pa: 30px 21px 26px
+    z-index: 1
+    br-radius: 5px
+    mb: 40px
+
+    &__
+        &top
+            pa: 0 30px 10px
+            br-bottom: 1px solid #ebebeb
+
+        &price
+            d: flex
+            ai: center
+            jc: center
+
+        &currency
+            color: #8a8a8a
+            fs: 16px
+            fw: 500
+            mb: -35px
+            mr: 10px
+
+        &dollar
+            color: #383838
+            fs: 60px
+            fw: 800
+
+        &cent-block
+            d: flex
+            flex-direction: column
+            ai: center
+            pb: 10px
+        
+        &cents
+            color: #383838
+            fs: 16px
+            fw: 800
+
+        &dots
+            w: 10px
+            h: 10px
+            bg-color: #383838
+            trans: rotate(45deg)
+            mt: 15px
+            br-radius: 2px
+        
+        &time
+            color: #8a8a8a
+            fs: 12px
+            fw: 500
+            mb: -35px
+            ml: 10px
+        
+        &plan-title
+            pos: absolute
+            top: 0
+            left: 50%
+            w: 138px
+            h: 40px
+            trans: translate(-50%, -50%)
+            z-index: 2
+            bg-color: #383838
+            color: #e4e4e4
+            tr: .3s
+
+            @media (hover: hover) and (pointer: fine)
+                &:hover
+                    bg-color: var(--theme-accent-main)
+
+        &middle
+            color: #8a8a8a
+            fs: 14px
+            fw: 500
+            fh: 40px
+            br-bottom: 1px solid #ebebeb
+            w: 100%
+        
+        &includes
+            d: flex
+            flex-direction: column
+            ai: center
+        
+        &button
+            w: 118px
+            h: 40px
+            bg-color: var(--theme-accent-main)
+            fs: 13px
+            color: #e4e4e4
+            fw: 800
+            mt: 25px
+            tr: .3s
+
+            @media (hover: hover) and (pointer: fine)
+                &:hover
+                    bg-color: #383838

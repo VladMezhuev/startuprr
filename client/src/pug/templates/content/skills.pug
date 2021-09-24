@@ -1,0 +1,59 @@
+include ./../../mixins/top-icon
+include ./../../mixins/progress-bar
+include ./../../mixins/index
+
+- 
+    const progresses = [
+        [{
+            count: 75,
+            percent: "75%",
+            title: "web design"
+        }],
+        [{
+            count: 92,
+            percent: "92%",
+            title: "web development"
+        }],
+        [{
+            count: 68,
+            percent: "68%",
+            title: "speed optimization"
+        }],
+        [{
+            count: 100,
+            percent: "100%",
+            title: "customer support"
+        }],
+        [{
+            count: 83,
+            percent: "83%",
+            title: "marketing"
+        }],
+        [{
+            count: 50,
+            percent: "50%",
+            title: "advertisement"
+        }],
+    ]
+
++b.features.img-section.SECTION
+    +topIcon("&#xe085;")
+    +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+        +b.category-wrapper
+            +b.site-category.--dark
+                +e.top
+                    +e.img-wrapper
+                        +e.image.img.IMG(src=('../public/icons/left-part.png'))
+                    +e.name.P our powerful 
+                        span.first-word  skills 
+                    +e.img-wrapper
+                        +e.image.img.IMG(src=('../public/icons/right-part.png'))
+                +e.bottom 
+                    +e.text.text.--category.P With unlimited features that we offer, we promise it’s possible to make everything that was impossible for you !
+        +b.progress 
+            each progress in progresses 
+                +e.column
+                    +progressBar(progress)
+                
+
+            

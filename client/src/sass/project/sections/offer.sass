@@ -1,0 +1,90 @@
+.offer-section
+    bg-color: white
+    pt: 60px
+
+    .offer
+        d: flex
+        ai: center
+        flex-direction: column
+        &__
+            &cards
+                d: flex
+                flex-direction: column
+                mt: 50px
+                
+                +mq-lg
+                    flex-direction: row
+                    jc: space-between
+
+
+            &column
+                w: 100%
+
+                +mq-lg
+                    w: 30%
+            
+                .card
+                    d: flex
+                    flex-direction: column
+                    ai: center
+                    h: 100%
+                    pa: 10px 0px
+                    tr: .3s
+                    cursor: pointer
+                    mb: 20px
+
+                    +mq-lg
+                        mb: 0px
+
+                    &__
+                        &image-wrapper
+                            w: 100px
+                            h: 100px
+                            d: flex
+                            ai: center
+                            jc: center
+                            bg-color: #383838
+                            br-radius: 50%
+                            tr: .3s
+                        
+                        &image
+                            ff: "Elegant"
+                            fs: 36px
+                            fw: 400
+                            ta: center
+                            color: white
+
+                            &--special
+                                ml: -6px
+                                mt: -6px
+                            
+                        &info
+                            d: flex
+                            flex-direction: column
+                            ai: center
+                            mt: 35px
+                        
+                        &title
+                            color: #606060
+                        
+                        &text
+                            ta: center
+                            mt: 20px
+                        
+                        &button
+                            w: 80px
+                            h: 29px
+                            mt: 17px
+                            tr: .3s
+                            
+
+                    @media (hover: hover) and (pointer: fine)
+                        &:hover
+                            .card
+                                &__
+                                    &image-wrapper
+                                        bg-color: var(--theme-accent-main)
+
+                                    &button
+                                        bg-color: var(--theme-accent-main)
+                                        color: #e3e3e3

@@ -1,0 +1,74 @@
+.map
+    pos: relative
+    h: 500px
+
+.map-wrapper
+    pos: relative
+    w: 100%
+    h: 100%
+    filter: grayscale(10)
+
+.message-form
+    pos: absolute
+    top: 50%
+    left: 20%
+    w: 368px
+    h: 338px
+    pa: 19px
+    d: flex
+    flex-direction: column
+    ai: center
+    br: 1px solid #dedede
+    bg-color: #f9f9f9
+    trans: translateY(-50%)
+    br-radius: 5px
+    display: none
+
+    +mq-lg
+        display: block
+
+    .message-input
+        pa: 15px 19px
+        color: #aaaaaa
+        fs: 12px
+        fw: 500
+        font-style: italic
+        fh: 22px
+        w: 100%
+        h: 40px
+        br: 1px solid #dedede
+        br-radius: 5px
+        mb: 20px
+        outline-color: #cecece
+
+    &__
+        &submit
+            bg-color: var(--theme-accent-main)
+            color: #e4e4e4
+            fw: 800
+            font-style: normal
+            pa: 0px
+            fs: 13px
+            w: 100%
+            h: 40px
+            tr: .3s
+
+            @media (hover: hover) and (pointer: fine)
+                &:hover
+                    bg-color: #383838
+
+        &textarea
+            h: 120px
+            w: 100%
+            br: 1px solid #dedede
+            outline-color: #cecece
+            pa: 16px 19px
+            color: #aaaaaa
+            fs: 12px
+            fw: 500
+            font-style: italic
+            mb: 20px
+            outline: none
+
+        &email
+            br: 1px solid #cecece

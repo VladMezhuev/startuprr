@@ -1,0 +1,13 @@
+include ./../../../node_modules/bemtopuginvue/bemto.pug
+
+mixin progressBar(progresses = [])
+    +b.progress-bar 
+        each progress in progresses
+            +b.circle.SVG(viewbox="0 0 33.83098862 33.83098862" width="120" height="120" xmlns="http://www.w3.org/2000/svg")
+                +e.circle-background.CIRCLE(stroke="#efefef" stroke-width="1" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431")
+                +e.circle-chart.CIRCLE(stroke="#00a99d" stroke-width="1" stroke-dasharray= progress.count stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431")
+            +e.text.SPAN= progress.percent
+            +e.title.title.--grey.H2= progress.title
+        
+      
+    

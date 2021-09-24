@@ -1,0 +1,18 @@
+include ./../../mixins/index
+
++b.map.SECTION 
+    +b.map-wrapper#map
+    +b.message-form.js-form.FORM(data-method='POST', data-action='https://httpbin.org/post')
+        +e.name.message-input.INPUT(
+            type='text' 
+            placeholder='Name'
+            data-rule="required|name"
+        )
+        +e.email.message-input.INPUT(
+            type='email'
+            name='name'
+            placeholder='Email Address'
+            data-rule="required"
+        )
+        +e.textarea.TEXTAREA(placeholder='Message...', name='textarea')
+        +e.submit.btn.INPUT(type='submit', name='submit' value='submit message')

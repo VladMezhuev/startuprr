@@ -1,0 +1,173 @@
+.works
+    pt: 47px
+    pb: 507px
+    d: flex
+    flex-direction: column
+    ai: center
+    pa: 47px 10px 107px
+
+    &__
+        &button
+            w: 250px
+            h: 40px
+            bg-color: var(--theme-accent-main)
+            color: #e4e4e4
+            mt: 100px
+            fs: 13px
+            tr: .3s
+
+            +mq-md
+                w: 500px
+
+            +mq-xl
+                w: 1170px
+
+            @media (hover: hover) and (pointer: fine)
+                &:hover
+                    bg-color: #39baab
+
+
+.work-wrapper
+    w: 100%
+    d: flex
+    ai: center
+    jc: center
+    flex-wrap: wrap
+    pos: relative
+
+    +mq-sm
+        jc: space-between
+    
+
+    &__
+        &column
+            pa: 0
+            mt: 1px
+            mb: 0px
+            w: 100%
+
+            +mq-sm
+                w: 33%
+            
+            +mq-md
+                w: 24.9%
+
+            +mq-xl
+                w: 16.5%
+
+
+    .card
+        w: 100%
+        h: 250px
+        pos: relative
+        perspective: 1000px
+        pa: 50px 0
+        color: #e4e4e4
+
+
+        &__
+            &front, &back
+                pos: absolute
+                w: 100%
+                h: 100%
+                d: flex
+                ai: center
+                jc: center
+                backface-visibility: hidden
+                br-radius: 5px
+
+                +mq-sm
+                    tr: 1s
+
+
+            &front
+                bg-color: var(--theme-accent-grey)
+                d: none
+
+                +mq-xl
+                    d: block
+
+            &back
+                bg-color: var(--theme-accent-main)
+
+                +mq-sm
+                    trans: rotateY(180deg)
+
+            &back-content
+                d: flex
+                flex-direction: column
+                ai: center
+
+            &top
+                d: flex
+                jc: center
+                ai: center
+
+            &icon-wrapper
+                w: 30px
+                h: 30px
+                d: flex
+                ai: center
+                jc: center
+                br-radius: 5px
+
+                &--left
+                    bg-color: #e4e4e4
+                    trans: translateX(1px) rotate(-45deg)
+                
+                &--right
+                    bg-color: #383838
+                    trans: translateX(-1px) rotate(45deg)
+
+            &icon
+                ff: "Elegant"
+                fs: 16px
+                color: white
+
+                &--left
+                    trans: rotate(45deg)
+                    color: #00a99d
+
+                &--right
+                    trans: rotate(-45deg)
+                    color: #e4e4e4
+
+
+            &bottom
+                d: flex
+                flex-direction: column
+                ai: center
+                mt: 40px
+
+                .like
+                    d: flex
+                    ai: center
+                    jc: center
+                    fs: 12px
+                    mt: 10px
+
+                    &__
+                        &icon
+                            ff: "Elegant"
+                            mr: 5px
+                            
+
+            &title
+                fs: 16px
+                fw: 800
+
+            &text
+                fs: 12px
+                fw: 500
+                fh: 22px
+                mt: 5px
+
+        
+        @media (hover: hover) and (pointer: fine)
+            &:hover
+                .card
+                    &__
+                        &front
+                            trans: rotateY(180deg)
+                        &back
+                            trans: rotateY(360deg)

@@ -1,0 +1,46 @@
+include ./../../mixins/top-icon
+include ./../../mixins/facts-card
+include ./../../mixins/index
+
+- 
+    const factsCards = [
+        [{
+            count: "218",
+            icon: "&#x5a;",
+            title: "completed projects",
+        }],
+        [{
+            count: "360",
+            icon: "&#xe0e1;",
+            title: "hours of work / month",
+        }],
+        [{
+            count: "135",
+            icon: "&#xe07c;",
+            title: "solved tickets",
+        }],
+        [{
+            count: "174",
+            icon: "&#xe0dd;",
+            title: "satisfied clients",
+        }],
+    ]   
+
++b.facts.img-section.SECTION
+    +topIcon("&#xe06e;")
+    +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+        +b.category-wrapper
+            +b.site-category.--dark
+                +e.top
+                    +e.img-wrapper
+                        +e.image.img.IMG(src=('../public/icons/left-part.png'))
+                    +e.name.P company 
+                        span.first-word facts
+                    +e.img-wrapper
+                        +e.image.img.IMG(src=('../public/icons/right-part.png'))
+                +e.bottom 
+                    +e.text.text.--category.P We do love to work and increase our counter numbers, this is what we’ve done till now
+        +b.facts-wrapper 
+            each card in factsCards 
+                +e.column
+                    +factsCard(card)

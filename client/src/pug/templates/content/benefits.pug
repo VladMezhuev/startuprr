@@ -1,0 +1,51 @@
+include ./../../mixins/benefits-card
+include ./../../mixins/index
+
+- 
+    const benefitCards = [
+        [{
+            icon: "&#xe00e;",
+            title: "responsive & multipurpose",
+            subtitle: 'Desktops, Tablets & Phones',
+            text: "Proin in magna a ipsum viverra scelerisque eu nec turp, Nunc vestibulum fringilla accumsan. Praesent arcu turpis."
+        }],
+        [{
+            icon: "&#xe0f9;",
+            title: "easy customization",
+            subtitle: 'One Click Demo Content Installation',
+            text: "Proin in magna a ipsum viverra scelerisque eu nec turp, Nunc vestibulum fringilla accumsan. Praesent arcu turpis."
+        }],
+        [{
+            icon: "&#xe033;",
+            title: "unlimited features",
+            subtitle: 'Shortcodes, Typography & Different Layouts',
+            text: "Proin in magna a ipsum viverra scelerisque eu nec turp, Nunc vestibulum fringilla accumsan. Praesent arcu turpis."
+        }],
+        [{
+            icon: "&#x62;",
+            title: "clean & modular coding",
+            subtitle: '100% Clean, Valid & Well-Commented Coding',
+            text: "Proin in magna a ipsum viverra scelerisque eu nec turp, Nunc vestibulum fringilla accumsan. Praesent arcu turpis."
+        }],
+        [{
+            icon: "&#xe015;",
+            title: "the best e-commerce solutions",
+            subtitle: 'WooCommerce Fully Integration',
+            text: "Proin in magna a ipsum viverra scelerisque eu nec turp, Nunc vestibulum fringilla accumsan. Praesent arcu turpis."
+        }],
+        [{
+            icon: "&#xe028;",
+            title: "awesome friendly support",
+            subtitle: 'Free Lifetime Support & Updates',
+            text: "Proin in magna a ipsum viverra scelerisque eu nec turp, Nunc vestibulum fringilla accumsan. Praesent arcu turpis."
+        }],
+        
+    ]   
+
++b.benefits.SECTION 
+    +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+        +b.benefits-block
+            each card in benefitCards 
+                +e.column 
+                    +benefitsCard(card)
+            

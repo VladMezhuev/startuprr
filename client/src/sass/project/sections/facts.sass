@@ -1,0 +1,83 @@
+.facts
+    pos: relative
+    pb: 94px
+
+    .facts-wrapper 
+        d: flex
+        ai: center
+        jc: space-between
+        flex-wrap: wrap
+        mt: 50px
+
+        &__
+            &column
+                w: 50%
+
+                +mq-lg
+                    w: 25%
+                
+
+                .fact
+                    d: flex
+                    flex-direction: column
+                    ai: center
+
+
+                    &__
+                        &top, &middle
+                            d: flex
+                            jc: space-between
+                            ai: center
+                            pa: 0 5px
+
+                            +mq-lg
+                                pa: 0 15px
+                        
+                        &top
+                            mt: 20px
+
+                            +mq-lg
+                                mt: 0px
+
+                        &middle
+                            mt: -15px
+                        
+                        &rhombus
+                            w: 10px
+                            h: 10px
+                            bg-color: #484848
+                            trans: rotate(45deg)
+
+                        &statistic-counter
+                            color: #e4e4e4
+                            fs: 60px
+                            fw: 500
+                            font-style: italic
+                            ma: 0 5px
+
+                            +mq-lg
+                                fs: 80px
+                                ma: 0 20px
+
+                        &line
+                            w: 55px
+                            h: 1px
+                            bg-color: #484848
+
+                            +mq-lg
+                                w: 90px
+
+                        &icon
+                            ff: "Elegant"
+                            fs: 20px
+                            color: #00a99d
+                            ma: 0 10px
+
+                        &title
+                            color: #606060
+                            mt: 5px
+                            ta: center
+
+
+                            
+        

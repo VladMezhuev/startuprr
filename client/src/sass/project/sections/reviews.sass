@@ -1,0 +1,75 @@
+.reviews
+    pos: relative
+    bg-color: var(--theme-accent-main)
+    pt: 77px
+    pb: 50px
+
+.reviews-slide
+    d: flex
+    flex-direction: column
+    ai: center
+    pa: 0 15px
+
+    &__
+        &top-button
+            w: 247px
+            h: 40px
+            br: none
+            bg-color: #e4e4e4
+            color: var(--theme-text-3)
+            fs: 13px
+            fw: 800
+
+        &span
+            fw: 500
+            color: #B7B7B7
+            ft: none
+        
+        &text
+            fs: 20px
+            fw: 500
+            fh: 34px
+            color: #e4e4e4
+            ta: justify
+            mt: 30px
+
+            +mq-md
+                ta: center
+
+        &quotes
+            color: #e4e4e4
+            fs: 20px
+            fw: 800
+
+.reviews-controls
+    d: flex
+    ai: center
+    jc: center
+    mt: 30px 
+
+    &__
+        &control-icon
+            fs: 25px
+            fw: 400
+            color: var(--theme-text-3)
+            tr: .3s
+
+    .reviews-control
+        bg-color: #e4e4e4
+        d: flex
+        ai: center
+        jc: center
+        w: 30px
+        h: 30px
+        ml: 10px
+        cursor: pointer
+        tr: .3s
+        br-radius: 5px
+
+        @media (hover: hover) and (pointer: fine)
+            &:hover
+                bg-color: #383838
+                .reviews-controls
+                    &__
+                        &control-icon
+                            color: #e4e4e4

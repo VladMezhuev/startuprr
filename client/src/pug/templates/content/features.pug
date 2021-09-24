@@ -1,0 +1,57 @@
+include ./../../mixins/top-icon
+include ./../../mixins/features-card
+include ./../../mixins/index
+
+- 
+    const cards = [
+        [{
+            icon: "&#xe00e;",
+            title: "responsive & multipurpose",
+            text: "Proin in magna a ipsum viverra scelerisq enec turp, nunc vestibulum."
+        }],
+        [{
+            icon: "&#xe0f9;",
+            title: "easy customization",
+            text: "Proin in magna a ipsum vivverra scelerisq enec turp, nunc vestibulum."
+        }],
+        [{
+            icon: "&#xe033;",
+            title: "unlimited features",
+            text: "Proin in magna a ipsum viverra scelerisq enec turp, nunc vestibulum."
+        }]
+    ]   
+
++b.features.img-section.SECTION
+    +topIcon("&#xe085;")
+    +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+        +b.category-wrapper
+            +b.site-category.--dark
+                +e.top
+                    +e.img-wrapper
+                        +e.image.img.IMG(src=('../public/icons/left-part.png'))
+                    +e.name.P amazing  
+                        span.first-word  features
+                    +e.img-wrapper
+                        +e.image.img.IMG(src=('../public/icons/right-part.png'))
+                +e.bottom 
+                    +e.text.text.--category.P With unlimited features that we offer, we promise it’s possible to make everything that was impossible for you !
+        +b.content
+            +b.features-cards 
+                each card in cards 
+                    +featuresCard(card)
+            +b.features-images 
+                +e.image-wrapper
+                    +e.image.img.IMG(src=('../../static/img/tablets.png'))
+
+//- [{
+//-             dollar: "19",
+//-             cents: "99",
+//-             time: "Monthly",
+//-             rate: "standard plan",
+//-             projects: "5 Projects",
+//-             storage: "5 GB Storage",
+//-             users: "Unlimited Users",
+//-             bandwith: "10 GB Bandwith",
+//-             security: "Enhanced Security",
+//-             button: "sign up now"
+//-         }]

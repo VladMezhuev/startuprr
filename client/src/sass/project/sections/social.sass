@@ -1,0 +1,39 @@
+.social
+    bg-color: #383838
+    pa: 50px 0 77px
+
+.social-links
+    d: flex
+    flex-direction: column
+    ai: center
+    w: 100%
+
+.links
+    mt: 67px
+    &__
+        &list
+            d: flex
+            ai: center
+            jc: center
+            flex-wrap: wrap
+        
+        &item
+            mr: 10px
+            w: 40px
+            h: 40px
+            bg-color: #383838
+            br-color: #606060
+            tr: .3s
+            mt: 5px
+
+            &:last-child
+                mr: 0px
+
+            @media (hover: hover) and (pointer: fine)
+                &:hover
+                    bg-color: var(--theme-accent-main)
+        
+        &link
+            fs: 16px
+            color: #e4e4e4
+            td: none

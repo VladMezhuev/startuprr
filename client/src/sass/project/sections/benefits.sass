@@ -1,0 +1,87 @@
+.benefits-block
+    d: flex
+    flex-direction: column
+    ai: center
+    mt: 20px
+    mb: 110px
+
+
+    +mq-sm
+        flex-direction: row
+        flex-wrap: wrap
+        ai: start
+        jc: space-between
+
+    &__
+        &column
+            padding: 0 20px
+            w: 100%
+
+            +mq-sm
+                w: 49%
+
+            +mq-md
+                w: 49%
+
+            +mq-lg
+                w: 32%
+
+    .benefits-card
+        d: flex
+        ai: flex-start
+        mt: 60px
+        cursor: default
+
+        &__
+            &icon-section
+                mr: 20px
+                d: flex
+                flex-direction: column
+                ai: center
+                
+            
+            &icon-wrapper-top
+                bg-color: #404040
+                bg-position: 100%
+                clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%)
+                w: 40px
+                h: 50px
+                z-index: 2
+                d: flex
+                ai: center
+                jc: center
+                br-radius: 5px
+                tr: .3s
+
+        
+            &icon-wrapper-bottom
+                mt: -30px
+                w: 40px
+                h: 50px
+                bg-color: #00a99d
+                clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%)
+                z-index: 1
+                tr: .3s
+
+
+            &icon
+                ff: "Elegant"
+                color: #e3e3e3
+                fs: 20px
+
+            &subtitle
+                mt: 10px
+
+            &text
+                mt: 20px
+
+        @media (hover: hover) and (pointer: fine)
+            &:hover
+                .benefits-card
+                    &__
+                        &icon-wrapper-top
+                            bg-color: #00a99d
+                            
+                        &icon-wrapper-bottom
+                            bg-color: #383838
+                

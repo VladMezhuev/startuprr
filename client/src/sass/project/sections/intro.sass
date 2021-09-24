@@ -1,0 +1,74 @@
+.intro
+    h: 100vh
+    bg-color: var(--theme-accent-grey)
+    pos: relative
+
+    +mq-md
+        h: 750px
+
+    .intro-card
+        pos: absolute
+        top: 50%
+        left: 50%
+        d: flex
+        flex-direction: column
+        ai: center
+        trans: translate(-50%, -50%)
+
+        +mq-lg
+            left: 20%
+            trans: translate(-20%, -50%)
+   
+        &__
+            &question
+                color: var(--theme-text-1)
+                fs: $type-font-size-sm
+                ft: uppercase
+
+                +mq-lg
+                    fs: $type-font-size-2md
+                    mb: -25px
+            
+            &title
+                color: var(--theme-text-1)
+                fs: $type-font-size-xl
+                white-space: nowrap
+                fw: 800
+                ft: uppercase
+                letter-spacing: 0.45px
+
+                +mq-lg
+                    fs: $type-font-size-4xl
+
+            &block
+                bg-color: var(--theme-accent-dark)
+                color: var(--theme-text-2)
+                fw: 500,
+                fs: $type-font-size-sm
+                pa: 8px 15px
+                ta: center
+                mt: 10px
+
+                +mq-lg
+                    fs: $type-font-size-2md
+            
+            &company-text
+                ft: uppercase
+
+                .text
+                    fw: 800
+                    ft: lowercase
+
+                    .first-letter
+                        color: var(--theme-text-3)
+                        ft: uppercase
+            
+        .scroll-btn
+            ff: "Elegant"
+            w: 58px
+            h: 57px
+            color: #00a99d
+            fs: $type-font-size-3xl
+            fw: 400
+            fd: none
+            mt: 50px

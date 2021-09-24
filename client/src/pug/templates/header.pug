@@ -1,0 +1,35 @@
+include ./../mixins/index
+
++b.header.HEADER 
+    +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+        +b.nav.NAV
+            +b.logo-wrapper.A(href=('#'))
+                +e.logo.img.IMG(src=('../public/img/logo.png'))
+            
+            +b.menu.js-menu 
+                +e.body
+                    +e.list.UL 
+                        +e.item.LI 
+                            +e.link.A(href=('#')) home
+                        +e.item.--activeLI 
+                            +e.link.--active.A(href=('#')) portfolio
+                        +e.item.LI 
+                            +e.link.A(href=('#')) blog
+                        +e.item.LI 
+                            +e.link.A(href=('#')) pages
+                        +e.item.LI 
+                            +e.link.A(href=('#')) features
+                        +e.item.LI 
+                            +e.link.A(href=('#')) mega menu
+                        +e.item.LI 
+                            +e.link.A(href=('#')) contact
+                        +e.search-button#search-button.search-btn.SPAN &#x55;
+                
+                +e.icon 
+                    +e.icon-line.--top.SPAN
+                    +e.icon-line.--middle.SPAN
+                    +e.icon-line.--bottom.SPAN
+            
+            +b.search-form#search-input.FORM 
+                +e.input.INPUT(type=('search') paceholder=('search'))
+                +e.button.icon.LABEL(for-("search")) &#x55;

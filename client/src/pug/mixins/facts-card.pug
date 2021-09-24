@@ -1,0 +1,15 @@
+include ./../../../node_modules/bemtopuginvue/bemto.pug
+
+mixin factsCard(cardsData = {})
+    +b.fact 
+        each card in cardsData
+            +e.top 
+                +e.rhombus.SPAN 
+                +e.statistic-counter= card.count
+                +e.rhombus.SPAN
+            +e.middle 
+                +e.line.SPAN 
+                +e.icon.SPAN!= card.icon
+                +e.line.SPAN 
+            +e.bottom 
+                +e.title.title= card.title

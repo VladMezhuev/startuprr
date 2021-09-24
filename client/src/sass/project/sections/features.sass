@@ -1,0 +1,38 @@
+.features
+    mt: 50px
+    pos: relative
+
+    .content
+        d: flex
+        flex-direction: column
+        align-items: center
+
+        +mq-md
+            flex-direction: row
+            jc: space-between
+
+        .features-cards 
+            d: flex
+            flex-direction: column
+            ai: center
+            mt: 90px
+
+            +mq-md
+                ai: start
+
+        .features-images
+
+            +mq-md
+                align-self: end
+            &__
+                &image-wrapper
+                    w: 310px
+
+                    +mq-md
+                        w: 450px
+
+                    +mq-lg
+                        w: 600px
+
+                    +mq-xl
+                        w: 711px

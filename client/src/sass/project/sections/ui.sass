@@ -1,0 +1,235 @@
+.logo-wrapper
+    w: 157px
+    h: 42px
+    z-index: 5
+img
+    d: block
+    h: 100%
+    object-position: center
+    object-fit: cover
+
+
+.category-wrapper
+    d: flex
+    ai: center
+    jc: center
+    
+
+    .site-category
+        
+        d: flex
+        flex-direction: column
+        ai: center
+        mt: 50px
+
+        &__
+            &top
+                pos: relative
+                d: flex
+                ai: center
+                jc: center
+
+            &img-wrapper
+                w: 28px
+                h: 15px   
+
+            &name
+                ma: 0 20px
+                color: var(--theme-text-1)
+                ft: uppercase
+                fw: 800
+                fh: 20px
+                fs: 18px
+
+                +mq-lg
+                    fs: 26px
+
+                .first-word
+                    color: var(--theme-text-3)
+            
+            &bottom
+                mt: 20px
+                ta: center
+
+            &text
+
+        &--dark
+            .site-category
+                &__
+
+                    &name
+                        color: white
+
+        &--alter
+            +mq-lg
+                .site-category
+                        &__
+                            &top
+                                &::before
+                                    content: ""
+                                    pos: absolute
+                                    top: 50%
+                                    right: -90%
+                                    
+                                    w: 250px
+                                    h: 6px
+                                    br-top: 1px solid transparent
+                                    br-bottom: 1px solid transparent
+                                    border-image: linear-gradient(to right, rgba(222, 222, 222, 100%) 0, rgba(228, 228, 228, 80%) 50%, rgba(241, 241, 241, 50%) 80%, rgba(241, 241, 241, 20%) 100%)
+                                    border-image-slice: 1
+                                    trans: translateY(-50%)
+                        
+                                &::after
+                                    content: ""
+                                    pos: absolute
+                                    top: 50%
+                                    left: -90%
+                                    right: 0
+                                    w: 250px
+                                    h: 6px
+                                    br-top: 1px solid transparent
+                                    br-bottom: 1px solid transparent
+                                    border-image: linear-gradient(to left, rgba(222, 222, 222, 100%) 0, rgba(228, 228, 228, 80%) 50%, rgba(241, 241, 241, 50%) 80%, rgba(241, 241, 241, 20%) 100%)
+                                    border-image-slice: 1
+                                    trans: translateY(-50%)
+
+        &--intro
+            +mq-lg
+                .site-category
+                    &__
+                        &top
+                            &::before
+                                content: ""
+                                pos: absolute
+                                top: 50%
+                                left: -50%
+                                w: 150px
+                                h: 6px
+                                br-top: 1px solid rgba(222, 222, 222, 100%)
+                                br-bottom: 1px solid rgba(222, 222, 222, 100%)
+                                border-image: none
+                                trans: translateY(-50%)
+
+                            &::after
+                                content: ""
+                                pos: absolute
+                                top: 50%
+                                right: -50%
+                                w: 150px
+                                h: 6px
+                                br-top: 1px solid rgba(222, 222, 222, 100%)
+                                br-bottom: 1px solid white
+                                border-image: none
+                                trans: translateY(-50%)
+
+.search-btn
+    ff: "Elegant"
+    fs: $type-font-size-md
+    fw: 400
+    ft: uppercase
+    color: var(--theme-text-3)
+    d: none
+    cursor: pointer
+
+    // +mq-lg
+    //     d: block
+
+.btn
+    d: inline-flex
+    ai: center
+    jc: center
+    bg-color: transparent
+    br: 1px solid #dedede
+    br-radius: 5px
+    color: #8a8a8a
+    fs: 10px
+    fw: 800
+    ft: uppercase
+    cursor: pointer
+    text-decoration: none
+
+.text
+    color: #7a7a7a
+    fs: 14px
+    fw: 500
+    fh: 24px
+
+    &--category
+        fs: 16px
+        color: #8a8a8a
+
+.title
+    fs: 14px
+    fw: 800
+    ft: uppercase
+
+    &--light
+        color: #e4e4e4
+    
+    &--grey
+        color: #8a8a8a
+
+.subtitle
+    fs: 12px
+    fw: 500
+    color: #aaaaaa
+
+.img-section
+    bg-color: #383838
+
+.top-icon
+        w: 40px
+        h: 40px
+        bg-color: var(--theme-accent-main)
+        trans: translate(-50%, -50%) rotate(45deg)
+        pos: absolute
+        top: 0
+        left: 50%
+        d: flex
+        ai: center
+        jc: center
+        br-radius: 5px
+        &__
+            &icon
+                ff: "Elegant"
+                fs: 20px
+                fw: 400
+                color: var(--theme-text-2)
+                trans: rotate(-45deg)
+        
+        &--dark
+            bg-color: #383838
+
+.features-card
+    w: 300px
+    d: flex
+    jc: space-between
+    ai: center
+    mb: 67px
+
+    +mq-lg
+        w: 338px
+
+
+    &__
+        &icon-wrapper
+            d: flex
+            ai: center
+            jc: center
+            mr: 15px
+
+            +mq-lg
+                mr: 35px
+        
+        &icon
+            ff: "Elegant"
+            fs: 40px
+            color: var(--theme-text-3)
+        
+        &text-part
+        
+        &text
+            mt: 10px
+
+.icon
+    ff: "Elegant"

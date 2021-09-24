@@ -1,0 +1,49 @@
+.question
+    bg-color: var(--theme-accent-main)
+    
+    .question-wrapper
+        h: 150px
+        d: flex
+        ai: center
+        flex-direction: column
+
+        +mq-lg
+            h: 80px
+        
+
+        +mq-lg
+            flex-direction: row
+            jc: space-between
+
+        &__
+            &title
+                color: #e4e4e4
+                fs: 16px
+                ta: center
+                mt: 20px
+
+                +mq-lg
+                    ta: left
+                    mt: 0px
+
+            &buttons
+                d: flex
+                jc: space-between
+                ai: center
+                mt: 20px
+
+                +mq-lg
+                    mt: 0px
+
+            &button
+                w: 150px
+                h: 40px
+                bg-color: #e4e4e4
+                color: #606060
+                fs: 13px
+                ml: 10px
+
+                &:first-child
+                    ml: 0px
+
+    

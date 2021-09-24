@@ -1,0 +1,24 @@
+include ./../../../node_modules/bemtopuginvue/bemto.pug
+
+
+mixin workCard(cardsData = [])
+        +b.card.d-cell
+            each card in cardsData
+                +e.front 
+                    +e.front-content.SPAN 
+                +e.back 
+                    +e.back-content
+                        +e.top 
+                            +e.icon-wrapper.--left
+                                +e.icon.--left.SPAN!= card.iconLeft
+                            +e.icon-wrapper.--right
+                                +e.icon.--right.SPAN!= card.iconRight
+                        +e.bottom 
+                            +e.title.H2= card.title
+                            +e.text.P= card.text
+                            +b.like 
+                                +e.icon &#xe089;
+                                +e.count= card.count
+    
+
+            

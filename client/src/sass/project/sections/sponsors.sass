@@ -1,0 +1,88 @@
+.sponsors
+    bg-color: #383838
+    h: 260px
+    pt: 30px
+    pos: relative
+
+.sponsors-slider-wrapper
+    pos: relative
+    w: 90%
+
+.sponsors-control
+    pos: absolute
+    top: 50%
+    trans: translateY(-50%)
+    bg-color: #e4e4e4
+    w: 30px
+    h: 30px
+    display: flex
+    align-items: center
+    justify-content: center
+    br-radius: 5px
+    tr: .3s
+    cursor: pointer
+    d: none
+
+    +mq-xl
+        d: flex
+
+    &__
+        &control-icon
+            color: var(--theme-text-3)
+            tr: .3s
+
+    @media (hover: hover) and (pointer: fine)
+        &:hover
+            bg-color: var(--theme-accent-main)
+
+            .sponsors-control
+                &__
+                    &control-icon
+                        color: #e4e4e4
+
+    
+
+.sponsors-prev
+    left: -50px
+
+.sponsors-next
+    right: -50px
+
+
+.sponsors-slide 
+    pos: relative
+    h: 160px
+    min-h: 1px
+    max-w: 100%
+    bg-color: #333333
+    ma: 15px
+    pa: 2%
+    opacity: .5
+    tr: .3s
+
+    @media (hover: hover) and (pointer: fine)
+        &:hover
+            opacity: 1
+
+    +mq-sm
+        max-w: 250px
+        ma: 15px
+    
+    +mq-md
+        max-w: 230px
+    
+    +mq-lg
+        max-w: 300px
+        ma: 20px
+    
+    +mq-xl
+        max-w: 250px
+    
+    
+    &__
+        &image-wrapper
+            pos: absolute
+            top: 50%
+            left: 50%
+            trans: translate(-50%, -50%)
+                

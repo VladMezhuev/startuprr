@@ -1,0 +1,74 @@
+include ./../../mixins/price-card
+include ./../../mixins/index
+
+- 
+    const price = [
+        [{
+            dollar: "19",
+            cents: "99",
+            time: "Monthly",
+            rate: "standard plan",
+            projects: "5 Projects",
+            storage: "5 GB Storage",
+            users: "Unlimited Users",
+            bandwith: "10 GB Bandwith",
+            security: "Enhanced Security",
+            button: "sign up now"
+        }],
+        [{
+            dollar: "29",
+            cents: "99",
+            time: "Monthly",
+            rate: "premium plan",
+            projects: "10 Projects",
+            storage: "15 GB Storage",
+            users: "Unlimited Users",
+            bandwith: "20 GB Bandwith",
+            security: "Enhanced Security",
+            button: "sign up now",
+        }],
+        [{
+            dollar: "49",
+            cents: "99",
+            time: "Monthly",
+            rate: "advanced plan",
+            projects: "15 Projects",
+            storage: "30 GB Storage",
+            users: "Unlimited Users",
+            bandwith: "50 GB Bandwith",
+            security: "Enhanced Security",
+            button: "sign up now",
+        }],
+        [{
+            dollar: "99",
+            cents: "99",
+            time: "Monthly",
+            rate: "ultimate plan",
+            projects: "Unlimited Projects",
+            storage: "Unlimited GB Storage",
+            users: "Unlimited Users",
+            bandwith: "Unlimited GB Bandwith",
+            security: "Enhanced Security",
+            button: "sign up now",
+        }],
+    ] 
+
++b.price.SECTION 
+    +b.team.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+        +b.category-wrapper
+            +b.site-category.--alter
+                +e.top
+                    +e.img-wrapper
+                        +e.image.img.IMG(src=('../public/icons/left-part.png'))
+                    +e.name.P real cheap 
+                        span.first-word prices
+                    +e.img-wrapper
+                        +e.image.img.IMG(src=('../public/icons/right-part.png'))
+                +e.bottom 
+                    +e.text.text.--category.P We offer all our services in real low prices in comparison with similar companies
+        
+        +b.price-list 
+            each card in price
+                +e.column 
+                    +priceCard(card)
+                    

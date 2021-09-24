@@ -1,0 +1,51 @@
+.progress
+    d: flex
+    jc: space-between
+    ai: center
+    flex-wrap: wrap
+    mt: 50px
+    pb: 70px
+
+    &__
+        &column
+            w: 50%
+            mt: 20px
+
+            +mq-lg
+                w: 15%
+                mt: 0px
+            
+    .progress-bar
+        d: flex
+        ai: center
+        flex-direction: column
+        pos: relative
+        
+
+        
+        .circle
+            d: block
+            pos: relative
+
+            &__
+                &circle-background
+                    trans: rotate(-90deg)
+                    transform-origin: center
+
+                &circle-chart
+                    trans: rotate(-90deg)
+                    transform-origin: center
+            
+        &__
+            &text
+                pos: absolute
+                top: 50%
+                left: 50%
+                trans: translate(-50%, -85%)
+                fs: 30px
+                fw: 800
+                color: white
+            
+            &title
+                mt: 10px
+            
